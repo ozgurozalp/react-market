@@ -13,8 +13,10 @@ import {
 	ProductTitle,
 	ProductDescription,
 	ProductPrice,
+	ProductListEmpty,
 } from './styled-elements';
 import { addToCart } from '../../reducers/cartSlice';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 export default function ProductList() {
 	const products = useAppSelector(selectProducts);
@@ -27,12 +29,16 @@ export default function ProductList() {
 			<Card>
 				{loading ? (
 					<Loading w={100} h={100} />
-				) : (
+				) : products.length ? (
 					<ProductListContainer>
 						{products.map(product => (
 							<ProductItem product={product} key={product.slug} />
 						))}
 					</ProductListContainer>
+				) : (
+					<ProductListEmpty>
+						<Player autoplay loop src="/no-items.json" style={{ width: 'min(100%, 200px)' }} />
+					</ProductListEmpty>
 				)}
 			</Card>
 			<Pagination />
