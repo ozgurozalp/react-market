@@ -60,7 +60,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
 	return (
 		<ProductItemContainer>
 			<ProductItemImage>
-				<img src={`https://source.unsplash.com/random?v=${crypto.randomUUID()}`} alt="" />
+				<img src={`https://source.unsplash.com/random?v=${product.slug}`} alt="" />
 			</ProductItemImage>
 			<ProductDescription>
 				<ProductPrice>{moneyFormat(product.price)}</ProductPrice>
