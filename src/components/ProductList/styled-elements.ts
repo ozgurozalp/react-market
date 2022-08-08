@@ -76,6 +76,7 @@ export const ProductAddToCart = styled.button`
 	font-size: 12px;
 	color: var(--text-color-light);
 	transition: all 0.3s ease-in-out;
+	align-self: flex-end;
 
 	&:hover {
 		background: var(--secondary-color);
