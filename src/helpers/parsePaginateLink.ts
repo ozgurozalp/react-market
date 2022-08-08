@@ -1,3 +1,5 @@
+import 'core-js/actual/object/from-entries'; // I use this lib because I received an error on some devices
+
 export type ParsePaginateLink = {
 	first: number;
 	last?: number;
