@@ -10,7 +10,8 @@ export const TagList = styled.div`
 	margin-inline-start: 12px;
 	margin-inline-end: 24px;
 	padding-inline: 12px;
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: 10px;
 `;
 export const Search = styled.div`
