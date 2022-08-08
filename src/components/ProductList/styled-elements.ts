@@ -82,3 +82,10 @@ export const ProductAddToCart = styled.button`
 		background: var(--secondary-color);
 	}
 `;
+
+export const ProductListEmpty = styled.div`
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+`;
