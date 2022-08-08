@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
+import { toast } from 'react-toastify';
 
 export interface CartItem {
 	id: string;
@@ -30,6 +31,7 @@ export const cartSlice = createSlice({
 				action.payload.price = action.payload.unitPrice * action.payload.quantity;
 				state.items.push(action.payload);
 			}
+			toast('Added to cart', { type: 'success' });
 			setCart(state.items);
 		},
 		incrementQuantity(state, action: PayloadAction<string>) {
