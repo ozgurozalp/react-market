@@ -4,11 +4,13 @@ import ProductService from './services/ProductService';
 import CompanyService from './services/CompanyService';
 import TagService from './services/TagService';
 import { useAppDispatch } from './store/hooks';
-import { setProducts, setProductsLoading } from './reducers/productSlice';
-import { setCompanies, setCompaniesLoading } from './reducers/companiesSlice';
-import { setTags, setTagLoading } from './reducers/tagsSlice';
+import { setProducts } from './reducers/productSlice';
+import { setCompanies } from './reducers/companiesSlice';
+import { setTags } from './reducers/tagsSlice';
 import { Container, Footer, Navbar } from './components';
 import { useQuery } from './hooks';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const dispatch = useAppDispatch();
@@ -60,6 +62,7 @@ function App() {
 			<Container py="0 2rem">
 				<Outlet />
 			</Container>
+			<ToastContainer />
 			<Footer />
 		</>
 	);
